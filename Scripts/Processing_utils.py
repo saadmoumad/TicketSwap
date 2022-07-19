@@ -5,9 +5,13 @@ import xml.etree.ElementTree as ET
 
 
 class file_processing():
-        def __init__(self) -> None:
+        def __init__(self, limit = None) -> None:
             self.limit = limit
             pass
+
+        def __get_df_from_xml_v2(self, path: str): #Stable starting from Pandas 1.3.2
+            df = pd.read_xml(path)
+            return df
         
         def __get_df_from_xml(self, path: str):
             loop_count = 0
@@ -29,50 +33,66 @@ class file_processing():
                 loop_count += 1
             return df
 
-        def save_parquet(self, df, path):
+        def __datetime_formating(self, time: str) -> datetime.datetime:
+            datetime_formated = datetime.datetime.strptime(time, '%Y-%m-%dT%H:%M:%S.%f')
+            return datetime_formated    
+
+        def save_parquet(self, df, file_name, dir=None):
             try:        
-                df.to_parquet(path)
+                df.to_parquet(os.path.join(dir, '{}.parquet'.format(file_name)))
             except:
                 return 0
             return 1
             
 
         def posts_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
+            df.CreationDate = df.CreationDate.apply(self.__datetime_formating)
+            df.LastEditDate = df.LastEditDate.apply(self.__datetime_formating)
+            df.LastActivityDate = df.LastActivityDate.apply(self.__datetime_formating)
             ## Any PreProcessing workflow
-            return df
+            return df 
 
         def comments_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
+            df.CreationDate = df.CreationDate.apply(self.__datetime_formating)
             ## Any PreProcessing workflow
             return df
 
-        def Users_processing(self, path):
-            df = self.__get_df_from_xml(path)
+        def users_processing(self, path):
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 
-        def Badges_processing(self, path):
-            df = self.__get_df_from_xml(path)
+        def badges_processing(self, path):
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 
         def postLinks_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 
         def tags_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 
         def votes_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 
         def postHistory_processing(self, path):
-            df = self.__get_df_from_xml(path)
+            df = self.__get_df_from_xml_v2(path)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df

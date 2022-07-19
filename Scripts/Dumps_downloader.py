@@ -31,7 +31,7 @@ class DD():
         return topics_mapping
 
     
-    def download_and_unzip(self, url: str, dir: str):
+    def download_and_unzip(self, url: str, dir= None):
         response = requests.get(url)
         print('File download status code: {}'.format(response.status_code))
         if response.status_code == 200:
@@ -41,5 +41,7 @@ class DD():
             with py7zr.SevenZipFile(full_temp_path, mode='r') as z: 
                     z.extractall(dir)
             temp.cleanup()
+            return 
+        print('Error downloading file from url: {}'.format(url))
     
 
