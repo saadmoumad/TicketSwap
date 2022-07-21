@@ -17,7 +17,7 @@ class DD():
         items_parser = soup.find_all('tr')
         return items_parser
 
-    def Topic_mapping_generator(self) -> dict:
+    def Sites_mapping_generator(self) -> dict:
         sites_items = self.__html_parser(self.url)
         sites_mapping = dict()
         for item in sites_items:

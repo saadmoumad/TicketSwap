@@ -9,7 +9,7 @@ class file_processing():
             self.limit = limit
             pass
 
-        def __get_df_from_xml_v2(self, path: str): #Stable starting from Pandas 1.3.2
+        def __get_df_from_xml_v2(self, path: str): #Stable starting from Pandas 1.4
             df = pd.read_xml(path, parser='etree')
             return df
         

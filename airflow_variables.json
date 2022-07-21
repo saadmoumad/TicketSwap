@@ -1,0 +1,11 @@
+{
+    "main_url": "https://archive.org/download/stackexchange",
+    "sites": "conlang", 
+    "raw_data_path": "/opt/airflow/raw_data",
+    "staging_area_path": "/opt/airflow/staging_area",
+    "scripts_path": "/opt/airflow/Scripts",
+    "db_host": "host.docker.internal",
+    "db_user": "newuser",
+    "db_pw": "*",
+    "db": "Stack_exchange_dump"
+}

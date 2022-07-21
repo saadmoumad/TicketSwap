@@ -20,11 +20,11 @@ class Sql_helper():
 
     def check_connection(self):
         engine = create_engine(self.sql_url)
-        try:
-            engine.connect()
-            return engine
-        except:
-            return None
+        #try:
+        engine.connect()
+        return engine
+        #except:
+            #return None
 
     def execute_sql_file(self, path, sql_engine):
         try:

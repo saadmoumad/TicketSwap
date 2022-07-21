@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tags>
+  <row Id="2" TagName="wheel-of-time-old-tongue" Count="1" ExcerptPostId="10" WikiPostId="9" />
+  <row Id="7" TagName="grammar" Count="48" ExcerptPostId="130" WikiPostId="129" />
+  <row Id="8" TagName="tolkien-elvish" Count="11" ExcerptPostId="45" WikiPostId="44" />
+  <row Id="9" TagName="toki-pona" Count="18" ExcerptPostId="260" WikiPostId="259" />
+  <row Id="12" TagName="legal" Count="3" ExcerptPostId="365" WikiPostId="364" />
+  <row Id="13" TagName="klingon" Count="11" ExcerptPostId="21" WikiPostId="20" />
+  <row Id="16" TagName="tengwar" Count="2" ExcerptPostId="617" WikiPostId="616" />
+  <row Id="17" TagName="tolkien-black-speech" Count="6" ExcerptPostId="247" WikiPostId="246" />
+  <row Id="19" TagName="inspiration" Count="14" ExcerptPostId="155" WikiPostId="154" />
+  <row Id="20" TagName="laadan" Count="2" ExcerptPostId="1527" WikiPostId="1526" />
+  <row Id="21" TagName="dovahzul" Count="2" ExcerptPostId="68" WikiPostId="67" />
+  <row Id="23" TagName="gender" Count="3" />
+  <row Id="27" TagName="voynich-manuscript" Count="2" />
+  <row Id="29" TagName="typology" Count="20" ExcerptPostId="630" WikiPostId="629" />
+  <row Id="30" TagName="sign-languages" Count="2" ExcerptPostId="1470" WikiPostId="1469" />
+  <row Id="31" TagName="classification" Count="15" ExcerptPostId="193" WikiPostId="192" />
+  <row Id="35" TagName="pidgin" Count="1" ExcerptPostId="73" WikiPostId="72" />
+  <row Id="36" TagName="ambiguity" Count="11" ExcerptPostId="61" WikiPostId="60" />
+  <row Id="39" TagName="phonology" Count="50" ExcerptPostId="234" WikiPostId="233" />
+  <row Id="40" TagName="morphology" Count="34" ExcerptPostId="419" WikiPostId="418" />
+  <row Id="42" TagName="parts-of-speech" Count="3" />
+  <row Id="43" TagName="esperanto" Count="11" ExcerptPostId="81" WikiPostId="80" />
+  <row Id="44" TagName="semantics" Count="6" />
+  <row Id="45" TagName="verbs" Count="13" ExcerptPostId="320" WikiPostId="319" />
+  <row Id="47" TagName="tolkien-dwarvish" Count="5" ExcerptPostId="358" WikiPostId="357" />
+  <row Id="48" TagName="lojban" Count="8" ExcerptPostId="183" WikiPostId="182" />
+  <row Id="49" TagName="language-structure" Count="7" />
+  <row Id="51" TagName="translation" Count="18" ExcerptPostId="281" WikiPostId="280" />
+  <row Id="52" TagName="writing-systems" Count="44" ExcerptPostId="199" WikiPostId="198" />
+  <row Id="53" TagName="speech-communities" Count="6" />
+  <row Id="55" TagName="language-change" Count="5" ExcerptPostId="230" WikiPostId="229" />
+  <row Id="56" TagName="regulation" Count="2" ExcerptPostId="151" WikiPostId="150" />
+  <row Id="61" TagName="verdurian-languages" Count="2" />
+  <row Id="62" TagName="cultural-influence" Count="5" />
+  <row Id="67" TagName="relexification" Count="4" ExcerptPostId="153" WikiPostId="152" />
+  <row Id="68" TagName="statistics" Count="3" />
+  <row Id="69" TagName="terminology" Count="21" ExcerptPostId="275" WikiPostId="274" />
+  <row Id="70" TagName="diachronics" Count="24" ExcerptPostId="228" WikiPostId="227" />
+  <row Id="73" TagName="language-families" Count="2" />
+  <row Id="74" TagName="natural-languages" Count="13" />
+  <row Id="75" TagName="unnatural-features" Count="16" ExcerptPostId="232" WikiPostId="231" />
+  <row Id="78" TagName="loglan" Count="2" ExcerptPostId="185" WikiPostId="184" />
+  <row Id="80" TagName="history" Count="34" ExcerptPostId="524" WikiPostId="523" />
+  <row Id="82" TagName="conlang-creation" Count="111" ExcerptPostId="209" WikiPostId="208" />
+  <row Id="83" TagName="sapir-whorf" Count="4" ExcerptPostId="218" WikiPostId="217" />
+  <row Id="86" TagName="unicode" Count="2" />
+  <row Id="88" TagName="naturalism" Count="38" ExcerptPostId="520" WikiPostId="519" />
+  <row Id="90" TagName="design-goals" Count="4" ExcerptPostId="369" WikiPostId="368" />
+  <row Id="91" TagName="case" Count="5" ExcerptPostId="757" WikiPostId="756" />
+  <row Id="94" TagName="machine-communication" Count="4" />
+  <row Id="95" TagName="syntax" Count="15" ExcerptPostId="1540" WikiPostId="1539" />
+  <row Id="101" TagName="resource-request" Count="15" />
+  <row Id="103" TagName="eurocentrism" Count="4" ExcerptPostId="604" WikiPostId="603" />
+  <row Id="105" TagName="registers" Count="2" />
+  <row Id="106" TagName="belter-creole" Count="2" />
+  <row Id="109" TagName="phrase-request" Count="4" />
+  <row Id="116" TagName="auxlangs" Count="14" ExcerptPostId="322" WikiPostId="321" />
+  <row Id="118" TagName="conlang-learning" Count="12" />
+  <row Id="121" TagName="tense-aspect-mood" Count="14" ExcerptPostId="829" WikiPostId="828" />
+  <row Id="122" TagName="biolinguistics" Count="4" />
+  <row Id="123" TagName="rlyehian" Count="3" ExcerptPostId="1048" WikiPostId="1047" />
+  <row Id="127" TagName="creoles" Count="4" />
+  <row Id="129" TagName="tools" Count="14" ExcerptPostId="703" WikiPostId="702" />
+  <row Id="132" TagName="miniature-artificial-languages" Count="3" ExcerptPostId="481" WikiPostId="480" />
+  <row Id="133" TagName="phonotactics" Count="3" ExcerptPostId="497" WikiPostId="496" />
+  <row Id="134" TagName="phonetics" Count="13" />
+  <row Id="138" TagName="list-of-languages" Count="24" ExcerptPostId="534" WikiPostId="533" />
+  <row Id="139" TagName="borrowings" Count="3" />
+  <row Id="140" TagName="vocabulary" Count="43" ExcerptPostId="559" WikiPostId="558" />
+  <row Id="141" TagName="language-acquisition" Count="6" />
+  <row Id="142" TagName="nouns" Count="7" />
+  <row Id="143" TagName="russian" Count="2" ExcerptPostId="577" WikiPostId="576" />
+  <row Id="145" TagName="ido" Count="4" ExcerptPostId="614" WikiPostId="613" />
+  <row Id="146" TagName="volapuk" Count="3" />
+  <row Id="147" TagName="interlingua" Count="3" ExcerptPostId="628" WikiPostId="627" />
+  <row Id="149" TagName="dialects" Count="3" />
+  <row Id="150" TagName="geography" Count="4" />
+  <row Id="152" TagName="glosa" Count="1" ExcerptPostId="729" WikiPostId="728" />
+  <row Id="153" TagName="english" Count="2" ExcerptPostId="731" WikiPostId="730" />
+  <row Id="154" TagName="roila" Count="1" ExcerptPostId="737" WikiPostId="736" />
+  <row Id="155" TagName="vowels" Count="6" />
+  <row Id="156" TagName="music" Count="2" ExcerptPostId="742" WikiPostId="741" />
+  <row Id="159" TagName="song-of-ice-and-fire" Count="4" ExcerptPostId="759" WikiPostId="758" />
+  <row Id="161" TagName="zonal-languages" Count="6" ExcerptPostId="786" WikiPostId="785" />
+  <row Id="162" TagName="slavic" Count="4" ExcerptPostId="788" WikiPostId="787" />
+  <row Id="163" TagName="glossing" Count="1" ExcerptPostId="792" WikiPostId="791" />
+  <row Id="164" TagName="conlang-community" Count="2" ExcerptPostId="809" WikiPostId="808" />
+  <row Id="168" TagName="occidental" Count="1" ExcerptPostId="846" WikiPostId="845" />
+  <row Id="176" TagName="number" Count="4" />
+  <row Id="181" TagName="conlang-documentation" Count="2" />
+  <row Id="188" TagName="sound-change" Count="3" />
+  <row Id="189" TagName="pronouns" Count="4" />
+  <row Id="190" TagName="untagged" Count="2" />
+  <row Id="191" TagName="complexity" Count="1" />
+  <row Id="192" TagName="trade-languages" Count="1" />
+</tags>
