@@ -10,7 +10,7 @@ class file_processing():
             pass
 
         def __get_df_from_xml_v2(self, path: str): #Stable starting from Pandas 1.3.2
-            df = pd.read_xml(path)
+            df = pd.read_xml(path, parser='etree')
             return df
         
         def __get_df_from_xml(self, path: str):
@@ -33,31 +33,42 @@ class file_processing():
                 loop_count += 1
             return df
 
-        def __datetime_formating(self, time: str) -> datetime.datetime:
-            datetime_formated = datetime.datetime.strptime(time, '%Y-%m-%dT%H:%M:%S.%f')
-            return datetime_formated    
+        def __datetime_formating(self, time) -> datetime.datetime:
+            if time:
+                datetime_formated = datetime.datetime.strptime(str(time), '%Y-%m-%dT%H:%M:%S.%f')
+                return datetime_formated 
+            return None   
 
         def save_parquet(self, df, file_name, dir=None):
             try:        
                 df.to_parquet(os.path.join(dir, '{}.parquet'.format(file_name)))
-            except:
+            except Exception as e:
+                print(e)
+                return 0
+            return 1
+
+        def make_staging_area(self, path):
+            try:
+                os.makedirs(path)
+            except OSError:
+                print ("Creation of the directory %s failed" % path)
                 return 0
             return 1
             
 
         def posts_processing(self, path):
             df = self.__get_df_from_xml_v2(path)
-            df.columns = df.columns.str.lower()
             df.CreationDate = df.CreationDate.apply(self.__datetime_formating)
             df.LastEditDate = df.LastEditDate.apply(self.__datetime_formating)
             df.LastActivityDate = df.LastActivityDate.apply(self.__datetime_formating)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df 
 
         def comments_processing(self, path):
             df = self.__get_df_from_xml_v2(path)
-            df.columns = df.columns.str.lower()
             df.CreationDate = df.CreationDate.apply(self.__datetime_formating)
+            df.columns = df.columns.str.lower()
             ## Any PreProcessing workflow
             return df
 

@@ -14,21 +14,24 @@ class DD():
     def __html_parser(self, url):
         response = requests.get(url)
         soup = bs(response.content, 'html.parser')
-        directory_listing = soup.select('tr td a')
-        return directory_listing
+        items_parser = soup.find_all('tr')
+        return items_parser
 
     def Topic_mapping_generator(self) -> dict:
-        s = self.__html_parser(self.url)
-        topics_mapping = dict()
-        for item in s:
-            href = item['href']
-            topic = href.split('.')[0]
+        sites_items = self.__html_parser(self.url)
+        sites_mapping = dict()
+        for item in sites_items:
+            tds = item.find_all('td')
+            href = tds[0].a['href']
+            site = href.split('.')[0]
+            dump_date = tds[1].text
+            dump_size = tds[-1].text
             if href[-3:] == '.7z' and 'meta' not in href:
                 try:
-                    topics_mapping[topic].append(href)
+                    sites_mapping[site][0].append(href)
                 except:
-                    topics_mapping[topic] = [href]
-        return topics_mapping
+                    sites_mapping[site] = [[href], dump_date, dump_size]
+        return sites_mapping
 
     
     def download_and_unzip(self, url: str, dir= None):
@@ -38,8 +41,10 @@ class DD():
             temp =tempfile.TemporaryDirectory()
             full_temp_path = os.path.join(temp.name, 'temp_archive.7z')
             open(full_temp_path, "wb").write(response.content)
-            with py7zr.SevenZipFile(full_temp_path, mode='r') as z: 
+            with py7zr.SevenZipFile(full_temp_path, mode='r') as z:
+                    print('Unziping Files ...') 
                     z.extractall(dir)
+            print('DONE')
             temp.cleanup()
             return 
         print('Error downloading file from url: {}'.format(url))

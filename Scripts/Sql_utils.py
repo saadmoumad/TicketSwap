@@ -1,9 +1,6 @@
-from distutils import errors
-from msilib.schema import Error
 import os
 import datetime
-#from ssl import _PasswordType
-#from xmlrpc.client import _HostType
+import re
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -29,10 +26,19 @@ class Sql_helper():
         except:
             return None
 
-    def parquet_to_sql(self, full_path, table_name, sql_engine):
+    def execute_sql_file(self, path, sql_engine):
+        try:
+            sql_engine.execute(open(path, "r").read())
+        except Exception as e:
+            print(e)
+            return 0
+        return 1
+
+
+    def parquet_to_sql(self, full_path, table_name, sql_engine, limit=None):
         df = pd.read_parquet(full_path)
         try:
-            df.to_sql(table_name, sql_engine)
+            df[:limit].to_sql(table_name, sql_engine, if_exists='append')
         except Exception as e:
             print(e)
             return 0

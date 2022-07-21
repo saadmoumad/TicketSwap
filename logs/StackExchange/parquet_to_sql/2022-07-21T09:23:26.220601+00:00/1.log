@@ -1,0 +1,23 @@
+[2022-07-21 09:23:42,349] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: StackExchange.parquet_to_sql manual__2022-07-21T09:23:26.220601+00:00 [queued]>
+[2022-07-21 09:23:42,367] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: StackExchange.parquet_to_sql manual__2022-07-21T09:23:26.220601+00:00 [queued]>
+[2022-07-21 09:23:42,368] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-21 09:23:42,369] {taskinstance.py:1239} INFO - Starting attempt 1 of 6
+[2022-07-21 09:23:42,369] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-21 09:23:42,394] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): parquet_to_sql> on 2022-07-21 09:23:26.220601+00:00
+[2022-07-21 09:23:42,401] {standard_task_runner.py:52} INFO - Started process 311 to run task
+[2022-07-21 09:23:42,408] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'StackExchange', 'parquet_to_sql', 'manual__2022-07-21T09:23:26.220601+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/stackexchange_dag.py', '--cfg-path', '/tmp/tmp5oaczqvw', '--error-file', '/tmp/tmpsplzjf9b']
+[2022-07-21 09:23:42,409] {standard_task_runner.py:77} INFO - Job 19: Subtask parquet_to_sql
+[2022-07-21 09:23:42,517] {logging_mixin.py:109} INFO - Running <TaskInstance: StackExchange.parquet_to_sql manual__2022-07-21T09:23:26.220601+00:00 [running]> on host 98e81b5638d8
+[2022-07-21 09:23:42,655] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=saad
+AIRFLOW_CTX_DAG_ID=StackExchange
+AIRFLOW_CTX_TASK_ID=parquet_to_sql
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-21T09:23:26.220601+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-21T09:23:26.220601+00:00
+[2022-07-21 09:23:42,657] {logging_mixin.py:109} INFO - uploading
+[2022-07-21 09:23:42,657] {python.py:175} INFO - Done. Returned value was: None
+[2022-07-21 09:23:42,679] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=StackExchange, task_id=parquet_to_sql, execution_date=20220721T092326, start_date=20220721T092342, end_date=20220721T092342
+[2022-07-21 09:23:42,750] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-07-21 09:23:42,828] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
